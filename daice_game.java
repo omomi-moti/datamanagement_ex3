@@ -1,5 +1,5 @@
 import java.util.Random;
-
+import java.util.Scanner; // ユーザー入力を受け取るためにScannerクラスをインポート
 /**
  * 二つのサイコロを振るシンプルなサイコロゲームのアプリケーションです。
  */
@@ -8,8 +8,11 @@ public class DiceGame {
     public static void main(String[] args) {
         // Randomクラスのインスタンスを生成して、乱数を扱えるようにします。
         Random randomGenerator = new Random();
-　　　　 System.out.println("What iss your name ?");
-        System.out.println("Hello John")
+        Scanner scanner = new Scanner(System.in);
+        
+　　　　 System.out.println("What is your name ?");
+        String name = scanner.nextLine(); // 入力された名前を読み取ります。
+        System.out.println("Hello" + name);
         System.out.println("Rolling dice..."); // 日本語: サイコロを振っています...
 
         // 1から6までの乱数を生成します (nextInt(6)は0-5の範囲なので+1します)。
